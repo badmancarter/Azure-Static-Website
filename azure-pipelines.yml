@@ -17,11 +17,10 @@ steps:
   inputs:
     sshEndpoint: 'ubuntu-nginx-ssh'
     sourceFolder: '$(Build.SourcesDirectory)'
-    contents: |
-      **
-    targetFolder: '$(deployPath)'
-    cleanTargetFolder: true
+    contents: '**'
+    targetFolder: '/var/www/html'
     overwrite: true
+    cleanTargetFolder: false
 
 # Restart nginx + verify deployment
 - task: SSH@0
