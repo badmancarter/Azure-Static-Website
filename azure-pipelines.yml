@@ -4,7 +4,7 @@ trigger:
       - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: SelfHostedPool
 
 variables:
   deployPath: /var/www/html
